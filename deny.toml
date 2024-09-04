@@ -63,16 +63,10 @@ feature-depth = 1
 # More documentation for the advisories section can be found here:
 # https://embarkstudios.github.io/cargo-deny/checks/advisories/cfg.html
 [advisories]
-# The path where the advisory database is cloned/fetched into
-db-path = "~/.cargo/advisory-db"
+# The path where the advisory databases are cloned/fetched into
+#db-path = "$CARGO_HOME/advisory-dbs"
 # The url(s) of the advisory databases to use
-db-urls = ["https://github.com/rustsec/advisory-db"]
-# The lint level for crates that have been yanked from their source registry
-yanked = "warn"
-# The lint level for crates with security notices. Note that as of
-# 2019-12-17 there are no security notice advisories in
-# https://github.com/rustsec/advisory-db
-
+#db-urls = ["https://github.com/rustsec/advisory-db"]
 # A list of advisory IDs to ignore. Note that ignored advisories will still
 # output a note when they are encountered.
 ignore = [
@@ -236,9 +230,9 @@ allow-registry = ["https://github.com/rust-lang/crates.io-index"]
 allow-git = []
 
 [sources.allow-org]
-# 1 or more github.com organizations to allow git sources for
-github = [""]
-# 1 or more gitlab.com organizations to allow git sources for
-gitlab = [""]
-# 1 or more bitbucket.org organizations to allow git sources for
-bitbucket = [""]
+# github.com organizations to allow git sources for
+github = []
+# gitlab.com organizations to allow git sources for
+gitlab = []
+# bitbucket.org organizations to allow git sources for
+bitbucket = []
